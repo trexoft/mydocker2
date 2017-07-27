@@ -23,8 +23,6 @@ services:
       - pgadmin
     volumes:
       - ./db:/var/lib/postgresql
-    expose:
-      - "5432"
     user: postgres
 
   pgadmin:
