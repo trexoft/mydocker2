@@ -19,11 +19,15 @@ services:
 
   postgis:
     image: mdillon/postgis
+    links:
+      - pgadmin
     volumes:
       - ./db:/var/lib/postgresql
     expose:
       - "5432"
     user: postgres
 
-#  pgadmin:
-#    image: fenglc/pgadmin4
+  pgadmin:
+    image: fenglc/pgadmin4
+    ports:
+      - "5050:5050"
