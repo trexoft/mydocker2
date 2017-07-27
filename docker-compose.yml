@@ -8,17 +8,19 @@ services:
       context: docker-geoserver
       args:
         - ORACLE_JDk=true
-    link:
+    links:
       - postgis
     ports:
       - "8080:8080"
-    volume:
+    volumes:
       - ./docker-geoserver/resources:/opt/geoserver/data_dir
 
   postgis:
     image: mdillon/postgis
-    volume:
+    volumes:
       - ./db:/var/lib/postgresql
+    expose:
+      - "5432"
 
 #  pgadmin:
 #    image: fenglc/pgadmin4
