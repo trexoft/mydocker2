@@ -1,3 +1,6 @@
 [submodule "docker-postgis"]
 	path = docker-postgis
 	url = git@github.com:thiras/docker-postgis.git
+[submodule "docker-geoserver"]
+	path = docker-geoserver
+	url = git@github.com:thiras/docker-geoserver.git
