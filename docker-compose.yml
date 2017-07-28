@@ -18,7 +18,9 @@ services:
       - postgis
 
   postgis:
-    image: mdillon/postgis
+    image: thiras/postgis
+    build:
+      context: docker-postgis
     environment:
       POSTGRES_PASSWORD: 123456
     links:
