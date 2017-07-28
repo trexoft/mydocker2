@@ -19,6 +19,8 @@ services:
 
   postgis:
     image: mdillon/postgis
+    environment:
+      POSTGRES_PASSWORD: 123456
     links:
       - pgadmin
     volumes:
