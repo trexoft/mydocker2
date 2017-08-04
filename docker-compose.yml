@@ -11,7 +11,7 @@ services:
     links:
       - postgis
     ports:
-      - "8080:8080"
+      - "8085:8080"
     volumes:
       - geo_data:/opt/geoserver/data_dir
     depends_on:
