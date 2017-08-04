@@ -36,13 +36,9 @@ services:
     ports:
       - "5050:5050"
     volumes:
-      - pga_data:/data
+      - pga_data:/var/lib/pgadmin4
 
 volumes:
   db_data:
   geo_data:
   pga_data:
-  # db_data:
-    # volume:
-      # nocopy: true
-  # geo_data:
