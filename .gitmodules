@@ -4,3 +4,6 @@
 [submodule "docker-geoserver"]
 	path = docker-geoserver
 	url = git@github.com:thiras/docker-geoserver.git
+[submodule "dockercloud-pgadmin4"]
+	path = dockercloud-pgadmin4
+	url = git@github.com:thiras/dockercloud-pgadmin4.git

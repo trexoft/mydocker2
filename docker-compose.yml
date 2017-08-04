@@ -30,7 +30,9 @@ services:
     user: postgres
 
   pgadmin:
-    image: fenglc/pgadmin4
+    image: thiras/pgadmin4
+    build:
+      context: dockercloud-pgAdmin4
     ports:
       - "5050:5050"
     volumes:
