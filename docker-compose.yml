@@ -32,7 +32,7 @@ services:
   pgadmin:
     image: thiras/pgadmin4
     build:
-      context: dockercloud-pgAdmin4
+      context: dockercloud-pgadmin4
     ports:
       - "5050:5050"
     volumes:
