@@ -1,4 +1,4 @@
-version: '3'
+version: '3.2'
 
 services:
 
@@ -13,7 +13,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./docker-geoserver/resources:/opt/geoserver/data_dir
+      - geo_data:/opt/geoserver/data_dir
     depends_on:
       - postgis
 
@@ -26,10 +26,18 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./db:/var/lib/postgresql
+      - db_data:/var/lib/postgresql
     user: postgres
 
   pgadmin:
     image: fenglc/pgadmin4
     ports:
       - "5050:5050"
+
+volumes:
+  db_data:
+  geo_data:
+  # db_data:
+    # volume:
+      # nocopy: true
+  # geo_data:
